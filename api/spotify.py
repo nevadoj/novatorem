@@ -44,7 +44,7 @@ def refreshToken():
     response = requests.post(REFRESH_TOKEN_URL, data=data, headers=headers)
 
     try:
-        return response.json()["access_token"]
+        return response.json()["refresh_token"]
     except KeyError:
         print(json.dumps(response.json()))
         print("\n---\n")
